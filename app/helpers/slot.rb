@@ -777,7 +777,7 @@ class Slot
     @nested = options[:nested]
     pre_content =  (card and !card.new_record?) ? form.hidden_field(:current_revision_id, :class=>'current_revision_id') : ''
     editor_partial = (card.type=='Pointer' ? ((c=card.setting('input'))  ? c.gsub(/[\[\]]/,'') : 'list') : 'editor')
-    pre_content + self.render_partial( card_partial(editor_partial), options ) + setup_autosave 
+    "#{pre_content} #{self.render_partial( card_partial(editor_partial), options )} #{setup_autosave}"
   end                          
  
   def save_function 
