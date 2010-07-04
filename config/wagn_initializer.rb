@@ -12,7 +12,7 @@ module Wagn
         config.gem "uuid"
         config.gem "json"
         unless ENV['RUN_CODE_RUN']
-          config.gem "hoptoad_notifier"
+          # config.gem "hoptoad_notifier"
         end
         require 'yaml'   
         require 'erb'     
